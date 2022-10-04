@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2022-10-04T12:30:02Z</date>
+    <groups>
+        <group>
+            <name>Templates/Applications</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Event Log</template>
+            <name>Event Log</name>
+            <groups>
+                <group>
+                    <name>Templates/Applications</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Event_Log</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Event ID 411 check</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>eventlog[Microsoft-Windows-Kernel-Pnp/Configuration]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <value_type>LOG</value_type>
+                    <applications>
+                        <application>
+                            <name>Event_Log</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{logeventid(411)}=1</expression>
+                            <recovery_mode>NONE</recovery_mode>
+                            <name>Event ID 411</name>
+                            <priority>HIGH</priority>
+                            <description>{ITEM.LASTVALUE1}&#13;
+{ITEM.LASTVALUE2}&#13;
+{ITEM.LASTVALUE3}</description>
+                            <manual_close>YES</manual_close>
+                            <tags>
+                                <tag>
+                                    <tag>Action</tag>
+                                    <value>call+Email</value>
+                                </tag>
+                                <tag>
+                                    <tag>Model</tag>
+                                    <value>Yönetilen Hizmet</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>
