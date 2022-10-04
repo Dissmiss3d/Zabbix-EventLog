@@ -18,4 +18,4 @@ Eğer başka bir lokasyonda olsaydı bunu log ekranındaki "General" tabı altı
 ![image](https://user-images.githubusercontent.com/85514498/193821492-4d224d2f-77ca-4bce-9fc4-cd082a3a7340.png)
 
 
-Template'i import ettikten sonra yukarıdaki bilgileri düzenlediğinde log oluştuğunda veri getirecek ve alarm üretecektir.
+Template'i import ettikten sonra yukarıdaki bilgileri düzenlediğinde log oluşursa veri getirecek ve alarm üretecektir.
