@@ -1,7 +1,9 @@
 ###Zabbix Server v5.0.10 ve agent 5.2.7'de test edildi##
 
 agent active parametresi "server" ile aynı olmalı
+
 "Server=proxy ya da zabbix server"
+
 "ServerActive=proxy ya da zabbix server"
 
 Burada önemli bir noktaya dikkat etmelisin. Zabbix GUI üzerindeki hostname ile zabbixagent.conf içerisindeki "hostname" aynı olmalı yoksa active agent host bulunamadı hatası verecektir.
